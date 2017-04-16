@@ -20,7 +20,7 @@ namespace HelloXamarin
 
     public partial class RestfulPage : ContentPage
     {
-        private const string Url = "https://jsonplaceholder.typicode.com/posts";
+        private const string Url = "http://jsonplaceholder.typicode.com/posts";
         private HttpClient _client = new HttpClient();
         private ObservableCollection<Post> _posts;
 
