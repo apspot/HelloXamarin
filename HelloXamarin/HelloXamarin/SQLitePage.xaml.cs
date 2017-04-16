@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,12 +14,31 @@ using Xamarin.Forms;
 namespace HelloXamarin
 {
     //[Table("Recipes")] if you want to change the name of the table in the database
-    public class Recipe
+    public class Recipe : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         [PrimaryKey, AutoIncrement] //Column("RecipeId") if you want to change the name of the field in the database
         public int Id { get; set; }
+
+        private string _name;
         [MaxLength(255)]
-        public string Name { get; set; }
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                if (_name == value)
+                    return;
+                _name = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
     public partial class SQLitePage : ContentPage
