@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloXamarin.Extensions"
+             x:Class="HelloXamarin.TablePage">
+  <TableView Intent="Settings">
+    <TableRoot>
+      <TableSection Title="Basics">
+        <TextCell Text="Name" Detail="This is my name" />
+        <EntryCell Label="Title" Placeholder="This is the placeholder" />
+        <SwitchCell Text="Notifications" On="true" />
+        <ViewCell> <!--We repeat ourselves if use this multiple times-->
+          <StackLayout Orientation="Horizontal" Padding="13, 0">
+            <Label Text="Starts" VerticalOptions="Center"/>
+            <DatePicker Date="1 Jan 2016" HorizontalOptions="EndAndExpand"/>
+          </StackLayout>
+        </ViewCell>
+        <local:DateCell Label="Starts"/> <!--Create an external custom cell if you don't want to repeat yourself-->
+        <local:DateCell Label="Ends"/>
+        <ViewCell Tapped="Handle_ContactMethodsTapped"> <!--picker with navigation-->
+          <StackLayout Orientation="Horizontal" Padding="13, 5">
+            <Label Text="Contact Method" VerticalOptions="Center" />
+            <Label x:Name="contactMethod" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="None" TextColor="Gray" />
+          </StackLayout>
+        </ViewCell>
+      </TableSection>
+    </TableRoot>
+  </TableView>
+</ContentPage>

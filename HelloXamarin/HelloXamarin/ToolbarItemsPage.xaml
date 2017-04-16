@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Title"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloXamarin.ToolbarItemsPage">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="New" Activated="Handle_Activated" Order="Primary">
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource"
+          iOS="plus.png"
+          Android="plus.png"
+          WinPhone="Images/plus.png"
+        />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+    <ToolbarItem Text="New" Activated="Handle_Activated" Order="Secondary">
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource"
+          iOS="plus.png"
+          Android="plus.png"
+          WinPhone="Images/plus.png"
+        />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+  <Label Text="Toolbar items page" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>

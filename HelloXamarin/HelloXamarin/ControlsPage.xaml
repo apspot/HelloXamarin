@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="HelloXamarin.ControlsPage">
+  <StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Switch IsToggled="true" Toggled="Handle_SwitchToggled" x:Name="switch"/>
+      <Label Text="Switch toggled" x:Name="labelForSwitch" VerticalOptions="Center"/>
+      <Label Text="Switch toggled" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}" VerticalOptions="Center"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Slider x:Name="slider" Maximum="255" Minimum="10" Value="50" ValueChanged="Handle_SliderValueChanged" WidthRequest="200"/>
+      <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N0}'}" VerticalOptions="Center"/>
+      <Label Text="Slider value" VerticalOptions="Center" x:Name="labelForSlider"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Stepper x:Name="stepper" Increment="5"/>
+      <Label Text="{Binding Source={x:Reference stepper}, Path=Value}" VerticalOptions="Center"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Entry Keyboard="Numeric" Placeholder="Phone"/>
+      <Entry IsPassword="true" Completed="Handle_EntryCompleted" TextChanged="Handle_EntryTextChanged"/>
+      <Label x:Name="labelForEntry1"/>
+      <Label x:Name="labelForEntry2"/>
+    </StackLayout>
+    <Picker x:Name="picker" Title="Contact method" SelectedIndexChanged="Handle_PickerSelectedIndexChanged">
+      <Picker.Items>
+        <x:String>SMS</x:String>
+        <x:String>Email</x:String>
+        <x:String>Posta</x:String>
+      </Picker.Items>
+    </Picker>
+    <DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MMM yyyy" MinimumDate="1 Jan 2016" MaximumDate="1 Jan 2020" DateSelected="Handle_DateSelected"/>
+    <TimePicker Time="13:00"/>
+    <Editor VerticalOptions="FillAndExpand"/>
+  </StackLayout>
+</ContentPage>
