@@ -60,7 +60,8 @@ namespace HelloXamarin
             //MainPage = new ApplicationPropertiesPage();
             //MainPage = new FileSystemPage();
             //MainPage = new SQLitePage();
-            MainPage = new RestfulPage();
+            //MainPage = new RestfulPage();
+            MainPage = new NavigationPage(new MvvmPlaylistsPage());
         }
 
         protected override void OnStart()

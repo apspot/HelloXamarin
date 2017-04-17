@@ -59,6 +59,13 @@
     </Compile>
     <Compile Include="IFileSystem.cs" />
     <Compile Include="ISQLiteDb.cs" />
+    <Compile Include="Model\Playlist.cs" />
+    <Compile Include="MvvmPlaylistDetailPage.xaml.cs">
+      <DependentUpon>MvvmPlaylistDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MvvmPlaylistsPage.xaml.cs">
+      <DependentUpon>MvvmPlaylistsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NavSimpleDetailPage.xaml.cs">
       <DependentUpon>NavSimpleDetailPage.xaml</DependentUpon>
     </Compile>
@@ -391,6 +398,16 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RestfulPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MvvmPlaylistDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MvvmPlaylistsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
