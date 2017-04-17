@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HelloXamarin.StylesPage">
+  <ContentPage.Resources> <!--property element syntax-->
+    <ResourceDictionary>
+      <Color x:Key="buttonBackgroundColor">Green</Color>
+      <Style TargetType="Button"> <!--implicit style-->
+        <Setter Property="BackgroundColor" Value="Red"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="BorderRadius" Value="20"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+      </Style>
+      <Style x:Key="button" TargetType="Button"> <!--explicit style-->
+        <Setter Property="BackgroundColor" Value="Gray"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="BorderRadius" Value="20"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+      </Style>
+      <Style x:Key="primaryButton" TargetType="Button" BasedOn="{StaticResource button}"> <!--inheritance-->
+        <Setter Property="BackgroundColor" Value="Pink"/>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout Spacing="20" VerticalOptions="Center">
+    <Button Text="Explicit" Style="{StaticResource primaryButton}"/>
+    <Button Text="Explicit with BackgroundColor override" Style="{StaticResource primaryButton}" BackgroundColor="Blue"/> <!--doesn't work :)-->
+    <Button Text="Implicit"/>
+    <Button Text="Implicit with TextColor override" TextColor="Black"/>
+    <Button Text="Implicit with BackgroundColor override" BackgroundColor="{StaticResource buttonBackgroundColor}"/>
+  </StackLayout>
+</ContentPage>
