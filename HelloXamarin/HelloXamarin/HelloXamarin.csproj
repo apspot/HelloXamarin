@@ -59,7 +59,7 @@
     </Compile>
     <Compile Include="IFileSystem.cs" />
     <Compile Include="ISQLiteDb.cs" />
-    <Compile Include="Model\Playlist.cs" />
+    <Compile Include="ViewModels\PlaylistViewModel.cs" />
     <Compile Include="MvvmPlaylistDetailPage.xaml.cs">
       <DependentUpon>MvvmPlaylistDetailPage.xaml</DependentUpon>
     </Compile>
@@ -148,6 +148,11 @@
     <Compile Include="ToolbarItemsPage.xaml.cs">
       <DependentUpon>ToolbarItemsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\IPageService.cs" />
+    <Compile Include="ViewModels\PageService.cs" />
+    <Compile Include="ViewModels\PlaylistsViewModel.cs" />
+    <Compile Include="Model\Playlist.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
