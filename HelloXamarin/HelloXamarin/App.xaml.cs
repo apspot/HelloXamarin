@@ -66,7 +66,8 @@ namespace HelloXamarin
             //MainPage = new RestfulPage();
             //MainPage = new NavigationPage(new MvvmPlaylistsPage());
             //MainPage = new ResourceDictionaryPage();
-            MainPage = new StylesPage();
+            //MainPage = new StylesPage();
+            MainPage = new NavigationPage(new MessagingCenterPage());
         }
 
         protected override void OnStart()

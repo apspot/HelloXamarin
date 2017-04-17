@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="IFileSystem.cs" />
     <Compile Include="ISQLiteDb.cs" />
+    <Compile Include="MessagingCenterPage.xaml.cs">
+      <DependentUpon>MessagingCenterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessagingCenterTargetPage.xaml.cs">
+      <DependentUpon>MessagingCenterTargetPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StylesPage.xaml.cs">
       <DependentUpon>StylesPage.xaml</DependentUpon>
     </Compile>
@@ -439,6 +445,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StylesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MessagingCenterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MessagingCenterTargetPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
