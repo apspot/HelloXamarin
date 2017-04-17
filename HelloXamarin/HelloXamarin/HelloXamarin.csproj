@@ -38,7 +38,9 @@
     <Compile Include="AbsolutePage.xaml.cs">
       <DependentUpon>AbsolutePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="App.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationPropertiesPage.xaml.cs">
       <DependentUpon>ApplicationPropertiesPage.xaml</DependentUpon>
     </Compile>
@@ -59,6 +61,9 @@
     </Compile>
     <Compile Include="IFileSystem.cs" />
     <Compile Include="ISQLiteDb.cs" />
+    <Compile Include="ResourceDictionaryPage.xaml.cs">
+      <DependentUpon>ResourceDictionaryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\PlaylistViewModel.cs" />
     <Compile Include="MvvmPlaylistDetailPage.xaml.cs">
       <DependentUpon>MvvmPlaylistDetailPage.xaml</DependentUpon>
@@ -413,6 +418,18 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MvvmPlaylistsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceDictionaryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

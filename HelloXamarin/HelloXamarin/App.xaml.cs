@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
 namespace HelloXamarin
 {
-    public class App : Application
+    public partial class App : Application
     {
         public App()
         {
+            InitializeComponent();
+
             // The root page of your application
             /*var content = new ContentPage
             {
@@ -61,7 +64,8 @@ namespace HelloXamarin
             //MainPage = new FileSystemPage();
             //MainPage = new SQLitePage();
             //MainPage = new RestfulPage();
-            MainPage = new NavigationPage(new MvvmPlaylistsPage());
+            //MainPage = new NavigationPage(new MvvmPlaylistsPage());
+            MainPage = new ResourceDictionaryPage();
         }
 
         protected override void OnStart()
