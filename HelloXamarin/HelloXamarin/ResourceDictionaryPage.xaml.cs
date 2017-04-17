@@ -16,5 +16,10 @@ namespace HelloXamarin
             /*this.Resources = new ResourceDictionary();
             this.Resources["borderRadius"] = 20;*/
         }
+
+        void ChangeStyle(object sender, EventArgs e)
+        {
+            Resources["buttonBackgroundColor"] = Color.Pink;
+        }
     }
 }

@@ -12,14 +12,15 @@
       </ResourceDictionary>
     </StackLayout.Resources-->
     <Button Text="Login"
-			BackgroundColor="{StaticResource buttonBackgroundColor}"
+			BackgroundColor="{DynamicResource buttonBackgroundColor}"
 			TextColor="White"
 			BorderRadius="{StaticResource borderRadius}"
 			FontAttributes="Bold" />
     <Button Text="Register"
-			BackgroundColor="{StaticResource buttonBackgroundColor}"
+			BackgroundColor="{DynamicResource buttonBackgroundColor}"
 			TextColor="White"
 			BorderRadius="{StaticResource borderRadius}"
 			FontAttributes="Bold" />
+    <Button Text="Change style" Clicked="ChangeStyle"/>
   </StackLayout>
 </ContentPage>
