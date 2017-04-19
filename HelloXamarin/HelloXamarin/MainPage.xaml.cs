@@ -14,6 +14,7 @@ namespace HelloXamarin
                 new MainMenuItemGroup("Excercises")
                 {
                     new MainMenuItem("XAML essentials excercise (quotes)", () => { return new QuotesPage(); }),
+                    new MainMenuItem("Stack layout excercise 1", () => { return new StackExcercise1(); }),
                     new MainMenuItem("Image excercise", () => { return new ImageExcercise(); })
                 },
                 new MainMenuItemGroup("Layouts")
