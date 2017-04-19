@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloXamarin.QuotesPage"
+             Padding="20">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+      WinPhone="20, 40, 20, 20"
+      Android="20, 30, 20, 20">
+    </OnPlatform>
+  </ContentPage.Padding>
+  <StackLayout BindingContext="{x:Reference slider}" HorizontalOptions="FillAndExpand">
+    <Button Text="Next" Clicked="Next" HorizontalOptions="Center"/>
+    <Label Text="{Binding Value, StringFormat='Font size: {0:N0}'}"/>
+    <Slider x:Name="slider" Maximum="50" Minimum="16"/>
+    <Label x:Name="label" FontSize="{Binding Value}"/>
+  </StackLayout>  
+</ContentPage>

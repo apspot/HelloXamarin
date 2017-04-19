@@ -11,6 +11,11 @@ namespace HelloXamarin
             InitializeComponent();
             listView.ItemsSource = new List<MainMenuItemGroup>
             {
+                new MainMenuItemGroup("Excercises")
+                {
+                    new MainMenuItem("XAML essentials excercise (quotes)", () => { return new QuotesPage(); }),
+                    new MainMenuItem("Image excercise", () => { return new ImageExcercise(); })
+                },
                 new MainMenuItemGroup("Layouts")
                 {
                     new MainMenuItem("Stack layout", () => { return new StackPage(); }),
