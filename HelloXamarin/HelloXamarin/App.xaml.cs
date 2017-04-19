@@ -12,62 +12,8 @@ namespace HelloXamarin
     {
         public App()
         {
-            InitializeComponent();
-
-            // The root page of your application
-            /*var content = new ContentPage
-            {
-                Title = "HelloXamarin",
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
-
-            MainPage = new NavigationPage(content);*/
-            //MainPage = new GreetPage();
-            //MainPage = new StackPage();
-            //MainPage = new GridPage();
-            //MainPage = new AbsolutePage();
-            //MainPage = new RelativePage();
-            //MainPage = new ImagePage();
-            //MainPage = new RoundedImagePage();
-            //MainPage = new ImageExcercise();
-            //MainPage = new ListPage();
-            //MainPage = new ListPage2();
-            //MainPage = new ListWithCustomCellPage();
-            //MainPage = new ListGroupPage();
-            //MainPage = new ListSelectionsPage();
-            //MainPage = new ListContextActionsPage();
-            //MainPage = new ListPullToRefreshPage();
-            //MainPage = new ListSearchBarPage();
-            /*MainPage = new NavigationPage(new NavHierarchicalPage1())
-            {
-                BarBackgroundColor = Color.Gray,
-                BarTextColor = Color.White
-            };*/
-            //MainPage = new NavigationPage(new NavSimpleMasterPage());
-            //MainPage = new NavMasterDetailPage();
-            //MainPage = new TabPage();
-            //MainPage = new CarouselTestPage();
-            //MainPage = new PopupsPage();
-            //MainPage = new NavigationPage(new ToolbarItemsPage());
-            //MainPage = new NavigationPage(new ControlsPage());
-            //MainPage = new NavigationPage(new TablePage());
-            //MainPage = new ApplicationPropertiesPage();
-            //MainPage = new FileSystemPage();
-            //MainPage = new SQLitePage();
-            //MainPage = new RestfulPage();
-            //MainPage = new NavigationPage(new MvvmPlaylistsPage());
-            //MainPage = new ResourceDictionaryPage();
-            //MainPage = new StylesPage();
-            MainPage = new NavigationPage(new MessagingCenterPage());
+            InitializeComponent();            
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
