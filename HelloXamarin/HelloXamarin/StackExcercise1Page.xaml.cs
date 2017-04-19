@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace HelloXamarin
 {
-    public partial class StackExcercise1 : ContentPage
+    public partial class StackExcercise1Page : ContentPage
     {
-        public StackExcercise1()
+        public StackExcercise1Page()
         {
             InitializeComponent();
         }

@@ -75,8 +75,8 @@
     <Compile Include="QuotesPage.xaml.cs">
       <DependentUpon>QuotesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StackExcercise1.xaml.cs">
-      <DependentUpon>StackExcercise1.xaml</DependentUpon>
+    <Compile Include="StackExcercise1Page.xaml.cs">
+      <DependentUpon>StackExcercise1Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="StylesPage.xaml.cs">
       <DependentUpon>StylesPage.xaml</DependentUpon>
@@ -485,7 +485,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="StackExcercise1.xaml">
+    <EmbeddedResource Include="StackExcercise1Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
