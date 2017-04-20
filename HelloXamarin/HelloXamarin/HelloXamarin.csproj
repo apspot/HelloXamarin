@@ -59,6 +59,9 @@
     <Compile Include="FileSystemPage.xaml.cs">
       <DependentUpon>FileSystemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GridExcercise1Page.xaml.cs">
+      <DependentUpon>GridExcercise1Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IFileSystem.cs" />
     <Compile Include="ISQLiteDb.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -495,6 +498,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StackExcercise2Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GridExcercise1Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
