@@ -18,6 +18,7 @@ namespace HelloXamarin
                     new MainMenuItem("Stack layout excercise 2", () => { return new StackExcercise2Page(); }),
                     new MainMenuItem("Grid excercise 1", () => { return new GridExcercise1Page(); }),
                     new MainMenuItem("Grid excercise 2", () => { return new GridExcercise2Page(); }),
+                    new MainMenuItem("Absolute excercise 1", () => { return new AbsoluteExcercise1Page(); }),
                     new MainMenuItem("Image excercise", () => { return new ImageExcercise(); })
                 },
                 new MainMenuItemGroup("Layouts")
