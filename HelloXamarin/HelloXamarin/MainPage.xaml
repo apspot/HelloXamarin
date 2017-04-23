@@ -9,8 +9,8 @@
       GroupDisplayBinding="{Binding Title}"
       ItemTapped="Handle_ItemTapped"
       ItemSelected="Handle_ItemSelected"
-      VerticalOptions="FillAndExpand"
-      HorizontalOptions="FillAndExpand">
+      VerticalOptions="Fill"
+      HorizontalOptions="Center">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding Name}"/>
