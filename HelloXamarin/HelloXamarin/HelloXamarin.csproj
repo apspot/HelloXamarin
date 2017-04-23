@@ -73,6 +73,9 @@
     </Compile>
     <Compile Include="IFileSystem.cs" />
     <Compile Include="ISQLiteDb.cs" />
+    <Compile Include="ListExcercisePage.xaml.cs">
+      <DependentUpon>ListExcercisePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -84,12 +87,15 @@
     </Compile>
     <Compile Include="Model\MainMenuItem.cs" />
     <Compile Include="Model\MainMenuItemGroup.cs" />
+    <Compile Include="Model\Search.cs" />
+    <Compile Include="Model\SearchGroup.cs" />
     <Compile Include="QuotesPage.xaml.cs">
       <DependentUpon>QuotesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="RelativeExcercisePage.xaml.cs">
       <DependentUpon>RelativeExcercisePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\SearchService.cs" />
     <Compile Include="StackExcercise1Page.xaml.cs">
       <DependentUpon>StackExcercise1Page.xaml</DependentUpon>
     </Compile>
@@ -540,6 +546,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RelativeExcercisePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListExcercisePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

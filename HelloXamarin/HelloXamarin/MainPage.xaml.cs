@@ -21,6 +21,7 @@ namespace HelloXamarin
                     new MainMenuItem("Absolute layout excercise 1", () => { return new AbsoluteExcercise1Page(); }),
                     new MainMenuItem("Absolute layout excercise 2", () => { return new AbsoluteExcercise2Page(); }),
                     new MainMenuItem("Relative layout excercise", () => { return new RelativeExcercisePage(); }),
+                    new MainMenuItem("List excercise", () => { return new ListExcercisePage(); }),
                     new MainMenuItem("Image excercise", () => { return new ImageExcercise(); })
                 },
                 new MainMenuItemGroup("Layouts")
