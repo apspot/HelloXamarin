@@ -10,11 +10,10 @@ namespace HelloXamarin.Droid
 {
 	public class SQLiteDb : ISQLiteDb
 	{
-		public SQLiteAsyncConnection GetConnection()
+		public SQLiteAsyncConnection GetConnection(string databaseName)
 		{
 			var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			var path = Path.Combine(documentsPath, "MySQLite.db3");
-
+			var path = Path.Combine(documentsPath, databaseName);
 			return new SQLiteAsyncConnection(path);
 		}
 	}

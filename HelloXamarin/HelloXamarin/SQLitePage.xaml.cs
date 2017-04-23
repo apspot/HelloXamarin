@@ -49,7 +49,7 @@ namespace HelloXamarin
         public SQLitePage()
         {
             InitializeComponent();
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            _connection = DependencyService.Get<ISQLiteDb>().GetConnection("SQLiteTest.sqlite");
         }
 
         protected override async void OnAppearing()

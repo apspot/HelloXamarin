@@ -11,10 +11,10 @@ namespace HelloXamarin.Windows
 {
     public class SQLiteDb : ISQLiteDb
     {
-        public SQLiteAsyncConnection GetConnection()
+        public SQLiteAsyncConnection GetConnection(string databaseName)
         {
 			var documentsPath = ApplicationData.Current.LocalFolder.Path;
-        	var path = Path.Combine(documentsPath, "MySQLite.db3");
+        	var path = Path.Combine(documentsPath, databaseName);
         	return new SQLiteAsyncConnection(path);
         }
     }

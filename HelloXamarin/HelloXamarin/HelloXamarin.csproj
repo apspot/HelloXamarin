@@ -53,8 +53,14 @@
     <Compile Include="CarouselTestPage.xaml.cs">
       <DependentUpon>CarouselTestPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContactDetailPage.xaml.cs">
+      <DependentUpon>ContactDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ContactMethodsPage.xaml.cs">
       <DependentUpon>ContactMethodsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContactsPage.xaml.cs">
+      <DependentUpon>ContactsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ControlsPage.xaml.cs">
       <DependentUpon>ControlsPage.xaml</DependentUpon>
@@ -592,6 +598,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NavExcerciseUserProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContactsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContactDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -13,6 +13,7 @@ namespace HelloXamarin
             {
                 new MainMenuItemGroup("Excercises")
                 {
+                    new MainMenuItem("ContactBook - CRUD, table, SQLite & messaging center excercise", () => { return new ContactsPage(); }),
                     new MainMenuItem("XAML essentials excercise (quotes)", () => { return new QuotesPage(); }),
                     new MainMenuItem("Stack layout excercise 1", () => { return new StackExcercise1Page(); }),
                     new MainMenuItem("Stack layout excercise 2", () => { return new StackExcercise2Page(); }),
@@ -23,7 +24,7 @@ namespace HelloXamarin
                     new MainMenuItem("Relative layout excercise", () => { return new RelativeExcercisePage(); }),
                     new MainMenuItem("Image excercise", () => { return new ImageExcercise(); }),
                     new MainMenuItem("List excercise - AirBnb's recent searches", () => { return new ListExcercisePage(); }),                    
-                    new MainMenuItem("Navigation excercise - Instagram", () => { return new NavExcerciseMainPage(); })
+                    new MainMenuItem("Navigation excercise - Instagram", () => { return new NavExcerciseMainPage(); }),                    
                 },
                 new MainMenuItemGroup("Layouts")
                 {

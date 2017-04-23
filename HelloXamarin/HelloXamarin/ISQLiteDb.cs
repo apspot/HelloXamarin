@@ -4,7 +4,7 @@ namespace HelloXamarin
 {
     public interface ISQLiteDb
     {
-        SQLiteAsyncConnection GetConnection();
+        SQLiteAsyncConnection GetConnection(string databaseName);
     }
 }
 
