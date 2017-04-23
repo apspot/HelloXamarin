@@ -85,17 +85,33 @@
     <Compile Include="MessagingCenterTargetPage.xaml.cs">
       <DependentUpon>MessagingCenterTargetPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Activity.cs" />
     <Compile Include="Model\MainMenuItem.cs" />
     <Compile Include="Model\MainMenuItemGroup.cs" />
     <Compile Include="Model\Search.cs" />
     <Compile Include="Model\SearchGroup.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="NavExcerciseActivityFeedPage.xaml.cs">
+      <DependentUpon>NavExcerciseActivityFeedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavExcerciseMainPage.xaml.cs">
+      <DependentUpon>NavExcerciseMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavExcerciseMyProfilePage.xaml.cs">
+      <DependentUpon>NavExcerciseMyProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavExcerciseUserProfilePage.xaml.cs">
+      <DependentUpon>NavExcerciseUserProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="QuotesPage.xaml.cs">
       <DependentUpon>QuotesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="RelativeExcercisePage.xaml.cs">
       <DependentUpon>RelativeExcercisePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\ActivityService.cs" />
     <Compile Include="Services\SearchService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="StackExcercise1Page.xaml.cs">
       <DependentUpon>StackExcercise1Page.xaml</DependentUpon>
     </Compile>
@@ -552,6 +568,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ListExcercisePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NavExcerciseMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NavExcerciseActivityFeedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NavExcerciseMyProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NavExcerciseUserProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

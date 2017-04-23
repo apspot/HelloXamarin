@@ -128,7 +128,9 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Images\clock.png" />
+    <Content Include="Images\heart.png" />
     <Content Include="Images\plus.png" />
+    <Content Include="Images\user.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
