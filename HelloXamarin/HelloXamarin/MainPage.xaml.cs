@@ -13,6 +13,7 @@ namespace HelloXamarin
             {
                 new MainMenuItemGroup("Excercises")
                 {
+                    new MainMenuItem("Netflix Roulette - Restful excercise", () => { return new MoviesPage(); }),
                     new MainMenuItem("ContactBook - CRUD, table, SQLite & messaging center excercise", () => { return new ContactsPage(); }),
                     new MainMenuItem("XAML essentials excercise (quotes)", () => { return new QuotesPage(); }),
                     new MainMenuItem("Stack layout excercise 1", () => { return new StackExcercise1Page(); }),

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="HelloXamarin.MoviesPage">
+  <StackLayout>
+    <Entry Placeholder="Search by actor..." TextChanged="Search"/>
+    <ActivityIndicator IsRunning="{Binding IsSearching}" IsVisible="{Binding IsSearching}"/>
+    <Label x:Name="notFound" Text=":(" FontSize="25" HorizontalOptions="Center" IsVisible="false"/>
+    <ListView x:Name="listView"
+      IsVisible="false"
+      ItemSelected="Handle_ItemSelected"
+      ItemTapped="Handle_ItemTapped"
+      VerticalOptions="FillAndExpand"
+      HorizontalOptions="Center">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ImageCell Text="{Binding Title}" Detail="{Binding ReleaseYear}" ImageSource="{Binding Poster}"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

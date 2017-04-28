@@ -94,9 +94,16 @@
     <Compile Include="Model\Activity.cs" />
     <Compile Include="Model\MainMenuItem.cs" />
     <Compile Include="Model\MainMenuItemGroup.cs" />
+    <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Search.cs" />
     <Compile Include="Model\SearchGroup.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="MovieDetailsPage.xaml.cs">
+      <DependentUpon>MovieDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoviesPage.xaml.cs">
+      <DependentUpon>MoviesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NavExcerciseActivityFeedPage.xaml.cs">
       <DependentUpon>NavExcerciseActivityFeedPage.xaml</DependentUpon>
     </Compile>
@@ -116,6 +123,7 @@
       <DependentUpon>RelativeExcercisePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\ActivityService.cs" />
+    <Compile Include="Services\MovieService.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="StackExcercise1Page.xaml.cs">
@@ -610,6 +618,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ContactDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MoviesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MovieDetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
