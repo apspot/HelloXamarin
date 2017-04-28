@@ -4,7 +4,7 @@
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
 	</ContentPage.Padding>
   <StackLayout>
-    <SearchBar x:Name="searchBar" Placeholder="Search..." TextChanged="Handle_Search"/>
+    <Entry x:Name="searchBar" Placeholder="Search..." TextChanged="Handle_Search"/>
     <ListView
       x:Name="listView"
       IsGroupingEnabled="true"
