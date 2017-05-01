@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using HelloXamarin.Model;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -34,6 +36,24 @@ namespace HelloXamarin.ViewModels
             AddContactCommand = new Command(async () => await AddContact());
             SelectContactCommand = new Command<ContactViewModel>(async c => await SelectContact(c));
             DeleteContactCommand = new Command<ContactViewModel>(async c => await DeleteContact(c));
+            MessagingCenter.Subscribe<ContactDetailViewModel, Contact>(this, ContactEvents.ContactAdded, OnContactAdded);
+            MessagingCenter.Subscribe<ContactDetailViewModel, Contact>(this, ContactEvents.ContactUpdated, OnContactUpdated);
+        }
+
+        private void OnContactAdded(ContactDetailViewModel source, Contact contact)
+        {
+            Contacts.Add(new ContactViewModel(contact));
+        }
+
+        private void OnContactUpdated(ContactDetailViewModel source, Contact contact)
+        {
+            var contactInList = Contacts.Single(c => c.Id == contact.Id);
+            contactInList.Id = contact.Id;
+            contactInList.FirstName = contact.FirstName;
+            contactInList.LastName = contact.LastName;
+            contactInList.Phone = contact.Phone;
+            contactInList.Email = contact.Email;
+            contactInList.IsBlocked = contact.IsBlocked;
         }
 
         private async Task LoadData()
@@ -48,12 +68,7 @@ namespace HelloXamarin.ViewModels
 
         private async Task AddContact()
         {
-            var viewModel = new ContactDetailViewModel(new ContactViewModel(), _contactStore, _pageService);
-            viewModel.ContactAdded += (source, contact) =>
-            {
-                Contacts.Add(new ContactViewModel(contact));
-            };
-            await _pageService.PushAsync(new ContactDetailPage(viewModel));
+            await _pageService.PushAsync(new ContactDetailPage(new ContactViewModel()));
         }
 
         private async Task SelectContact(ContactViewModel contact)
@@ -61,17 +76,7 @@ namespace HelloXamarin.ViewModels
             if (contact == null)
                 return;
             SelectedContact = null;
-            var viewModel = new ContactDetailViewModel(contact, _contactStore, _pageService);
-            viewModel.ContactUpdated += (source, updatedContact) =>
-            {
-                contact.Id = updatedContact.Id;
-                contact.FirstName = updatedContact.FirstName;
-                contact.LastName = updatedContact.LastName;
-                contact.Phone = updatedContact.Phone;
-                contact.Email = updatedContact.Email;
-                contact.IsBlocked = updatedContact.IsBlocked;
-            };
-            await _pageService.PushAsync(new ContactDetailPage(viewModel));
+            await _pageService.PushAsync(new ContactDetailPage(contact));
         }
 
         private async Task DeleteContact(ContactViewModel contactViewModel)

@@ -1,14 +1,17 @@
-﻿using HelloXamarin.ViewModels;
+﻿using HelloXamarin.Persistence;
+using HelloXamarin.ViewModels;
 using Xamarin.Forms;
 
 namespace HelloXamarin
 {
     public partial class ContactDetailPage : ContentPage
     {
-        public ContactDetailPage(ContactDetailViewModel viewModel)
+        public ContactDetailPage(ContactViewModel viewModel)
         {
             InitializeComponent();
-            BindingContext = viewModel;
+            var contactStore = new SQLiteContactStore(DependencyService.Get<ISQLiteDb>());
+            var pageService = new PageService();
+            BindingContext = new ContactDetailViewModel(viewModel ?? new ContactViewModel(), contactStore, pageService);
         }
     }
 }
