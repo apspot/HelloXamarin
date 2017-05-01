@@ -116,6 +116,7 @@
     <Compile Include="NavExcerciseUserProfilePage.xaml.cs">
       <DependentUpon>NavExcerciseUserProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Persistence\SQLiteContactStore.cs" />
     <Compile Include="QuotesPage.xaml.cs">
       <DependentUpon>QuotesPage.xaml</DependentUpon>
     </Compile>
@@ -138,6 +139,10 @@
     <Compile Include="ResourceDictionaryPage.xaml.cs">
       <DependentUpon>ResourceDictionaryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\ContactDetailViewModel.cs" />
+    <Compile Include="ViewModels\ContactsPageViewModel.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
+    <Compile Include="ViewModels\IContactStore.cs" />
     <Compile Include="ViewModels\PlaylistViewModel.cs" />
     <Compile Include="MvvmPlaylistDetailPage.xaml.cs">
       <DependentUpon>MvvmPlaylistDetailPage.xaml</DependentUpon>

@@ -1,21 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelloXamarin.ContactsPage">
+             x:Class="HelloXamarin.ContactsPage"
+             x:Name="page">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Add" Icon="Images/plus.png" Activated="Handle_Add" Order="Primary"/>
+    <ToolbarItem Text="Add" Icon="Images/plus.png" Command="{Binding AddContactCommand}" Order="Primary"/>
   </ContentPage.ToolbarItems>
   <ListView
-    x:Name="listView"
-    ItemTapped="Handle_ItemTapped"
-    ItemSelected="Handle_ItemSelected"
+    ItemsSource="{Binding Contacts}"
+    SelectedItem="{Binding SelectedContact, Mode=TwoWay}"
+    ItemSelected="OnContactSelected"
     VerticalOptions="Fill"
     HorizontalOptions="Center">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding FullName}">
           <TextCell.ContextActions>
-            <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding .}" IsDestructive="true"/>
+            <MenuItem Text="Delete"
+              Command="{Binding Source={x:Reference page}, Path=ViewModel.DeleteContactCommand}"
+              CommandParameter="{Binding .}"
+              IsDestructive="true"/>
           </TextCell.ContextActions>
         </TextCell>
       </DataTemplate>

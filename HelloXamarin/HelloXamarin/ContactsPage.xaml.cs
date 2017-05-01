@@ -1,4 +1,6 @@
 ﻿using HelloXamarin.Model;
+using HelloXamarin.Persistence;
+using HelloXamarin.ViewModels;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -13,71 +15,29 @@ namespace HelloXamarin
 {
     public partial class ContactsPage : ContentPage
     {
-        private SQLiteAsyncConnection _connection;
-        private ObservableCollection<Contact> _contacts;
-        private bool _firstAppear = true;
-
         public ContactsPage()
         {
-            InitializeComponent();
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection("Contacts.sqlite");
+            var contactStore = new SQLiteContactStore(DependencyService.Get<ISQLiteDb>());
+            var pageService = new PageService();
+            ViewModel = new ContactsPageViewModel(contactStore, pageService);
+            InitializeComponent();            
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
-            if (_firstAppear)
-            {
-                _firstAppear = false;
-                await _connection.CreateTableAsync<Contact>();
-                var contacts = await _connection.Table<Contact>().ToListAsync();
-                _contacts = new ObservableCollection<Contact>(contacts);
-                listView.ItemsSource = _contacts;
-            }
+            ViewModel.LoadDataCommand.Execute(null);
             base.OnAppearing();
         }
 
-        async void Handle_Add(object sender, EventArgs e)
+        void OnContactSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var page = new ContactDetailPage(new Contact());
-            page.ContactAdded += async (source, contact) =>
-            {
-                await _connection.InsertAsync(contact);
-                _contacts.Add(contact);
-            };
-            await Navigation.PushAsync(page);
+            ViewModel.SelectContactCommand.Execute(e.SelectedItem);
         }
 
-        void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        public ContactsPageViewModel ViewModel
         {
-            listView.SelectedItem = null;
-        }
-
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            var selectedContact = e.Item as Contact;
-            listView.SelectedItem = null;
-            var page = new ContactDetailPage(selectedContact);
-            page.ContactUpdated += (source, contact) =>
-            {
-                selectedContact.Id = contact.Id;
-                selectedContact.FirstName = contact.FirstName;
-                selectedContact.LastName = contact.LastName;
-                selectedContact.Phone = contact.Phone;
-                selectedContact.Email = contact.Email;
-                selectedContact.IsBlocked = contact.IsBlocked;
-                _connection.UpdateAsync(selectedContact);
-            };
-            await Navigation.PushAsync(page);
-        }
-
-        async void Delete_Clicked(object sender, EventArgs e)
-        {
-            var contact = (sender as MenuItem).CommandParameter as Contact;
-            if (await DisplayAlert("Warning", $"Are you sure you want to delete {contact.FullName}?", "Yes", "No"))
-            {
-                _contacts.Remove(contact);
-                await _connection.DeleteAsync(contact);
-            }
+            get { return BindingContext as ContactsPageViewModel; }
+            set { BindingContext = value; }
         }
     }
 }
