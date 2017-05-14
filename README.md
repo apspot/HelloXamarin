@@ -34,3 +34,9 @@ Supported platforms: Android, IOS, Windows 8.1 Desktop & Phone
 <img src="./Screenshots/Android/Screenshot_20170514-103455.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/Android/Screenshot_20170514-103508.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/Android/Screenshot_20170514-103530.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/Android/Screenshot_20170514-103543.png" width="200" hspace="5" vspace="5"/>
 
 <img src="./Screenshots/Android/Screenshot_20170514-103552.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/Android/Screenshot_20170514-103602.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/Android/Screenshot_20170514-103726.png" width="200" hspace="5" vspace="5"/>
+
+## WinPhone screenshots
+
+<img src="./Screenshots/WinPhone/WinPhone01.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/WinPhone/WinPhone02.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/WinPhone/WinPhone03.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/WinPhone/WinPhone04.png" width="200" hspace="5" vspace="5"/>
+
+<img src="./Screenshots/WinPhone/WinPhone05.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/WinPhone/WinPhone06.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/WinPhone/WinPhone07.png" width="200" hspace="5" vspace="5"/><img src="./Screenshots/WinPhone/WinPhone08.png" width="200" hspace="5" vspace="5"/>
