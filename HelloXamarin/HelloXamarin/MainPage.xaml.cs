@@ -13,9 +13,9 @@ namespace HelloXamarin
             {
                 new MainMenuItemGroup("Excercises")
                 {
-                    new MainMenuItem("Netflix Roulette - Restful excercise", () => { return new MoviesPage(); }),
-                    new MainMenuItem("ContactBook - CRUD, table, SQLite & messaging center excercise", () => { return new ContactsPage(); }),
-                    new MainMenuItem("XAML essentials excercise (quotes)", () => { return new QuotesPage(); }),
+                    new MainMenuItem("Netflix Roulette", "Restful excercise", () => { return new MoviesPage(); }),
+                    new MainMenuItem("ContactBook", "CRUD, table, SQLite & messaging center excercise", () => { return new ContactsPage(); }),
+                    new MainMenuItem("Quotes", "XAML essentials excercise", () => { return new QuotesPage(); }),
                     new MainMenuItem("Stack layout excercise 1", () => { return new StackExcercise1Page(); }),
                     new MainMenuItem("Stack layout excercise 2", () => { return new StackExcercise2Page(); }),
                     new MainMenuItem("Grid excercise 1 + style excercise", () => { return new GridExcercise1Page(); }),
@@ -24,8 +24,8 @@ namespace HelloXamarin
                     new MainMenuItem("Absolute layout excercise 2", () => { return new AbsoluteExcercise2Page(); }),
                     new MainMenuItem("Relative layout excercise", () => { return new RelativeExcercisePage(); }),
                     new MainMenuItem("Image excercise", () => { return new ImageExcercise(); }),
-                    new MainMenuItem("List excercise - AirBnb's recent searches", () => { return new ListExcercisePage(); }),                    
-                    new MainMenuItem("Navigation excercise - Instagram", () => { return new NavExcerciseMainPage(); }),                    
+                    new MainMenuItem("AirBnb's recent searches", "List excercise", () => { return new ListExcercisePage(); }),                    
+                    new MainMenuItem("Instagram", "Navigation excercise", () => { return new NavExcerciseMainPage(); }),                    
                 },
                 new MainMenuItemGroup("Layouts")
                 {
@@ -60,7 +60,7 @@ namespace HelloXamarin
                             BarTextColor = Color.White
                         };
                     }),
-                    new MainMenuItem("Simple master-detail", () => { return new NavSimpleMasterPage(); }),
+                    new MainMenuItem("Simple master-detail", "Contacts", () => { return new NavSimpleMasterPage(); }),
                     new MainMenuItem("Master-detail", () => { return new NavMasterDetailPage(); }),
                     new MainMenuItem("Tab", () => { return new TabPage(); }),
                     new MainMenuItem("Carousel", () => { return new CarouselTestPage(); }),

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelloXamarin.AbsoluteExcercise1Page">
+             x:Class="HelloXamarin.AbsoluteExcercise1Page"
+             Title="Absolute layout excercise 1">
   <AbsoluteLayout>
     <BoxView Color="#f7f7f7" AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" AbsoluteLayout.LayoutFlags="All" />
     <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="Center" VerticalOptions="Center">

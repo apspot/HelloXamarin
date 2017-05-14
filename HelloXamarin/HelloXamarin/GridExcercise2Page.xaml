@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelloXamarin.GridExcercise2Page"
-             BackgroundColor="#127ac7">
+             BackgroundColor="#127ac7"
+             Title="Grid excercise 2">
   <Grid Padding="20">
     <Grid.RowDefinitions>
       <RowDefinition Height="*" />
